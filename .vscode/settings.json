@@ -1,0 +1,30 @@
+{
+  "editor.tabSize": 2,
+  "path-autocomplete.pathMappings": {
+    "~": "${folder}",
+    "@": "${folder}"
+  },
+  "eslint.validate": [
+    {
+      "language": "vue",
+      "autoFix": true
+    },
+    {
+      "language": "javascript",
+      "autoFix": true
+    },
+    {
+      "language": "typescript",
+      "autoFix": true
+    }
+  ],
+  "eslint.autoFixOnSave": true,
+  "editor.formatOnSave": false,
+  // https://stackoverflow.com/questions/47834825/in-vs-code-disable-error-comments-are-not-permitted-in-json
+  "files.associations": {
+    ".json": "jsonc"
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  }
+}

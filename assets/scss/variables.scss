@@ -1,0 +1,82 @@
+// text styles
+$text-sizes: (
+  huge: 3.0rem,
+  large: 2.4rem,
+  normal: 2.1rem,
+  small: 1.8rem,
+  minimum: 1.4rem
+);
+$sp-text-sizes: (
+  huge: 2.1rem,
+  large: 1.8rem,
+  normal: 1.6rem,
+  small: 1.4rem,
+  minimum: 1.2rem
+);
+
+$text-weights: (
+  bold: 900,
+  regular: 400,
+  thin: 100
+);
+
+@mixin text($size, $thickness) {
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  font-size: map-get($text-sizes, $size);
+  font-weight: map-get($text-weights, $thickness);
+
+  @media screen and (max-width: $container-width) {
+    font-size: map-get($sp-text-sizes, $size);
+  }
+}
+
+// colors
+$color-base: #FFF;
+$color-base-hover: #EEE;
+
+// z-index
+$z-index-content: 1;
+$z-index-header: 50;
+$z-index-overlay: 100;
+$z-index-modal: 500;
+$z-index-overlay-second: 510;
+$z-index-modal-second: 550;
+$z-index-header-menu: 600;
+$z-index-loading: 1000;
+
+$box-shadow-base: 0 3px 6px rgba(0, 0, 0, .16);
+$text-shadow:  0 12px 24px rgba(29, 9, 9, 0.16);
+
+$content-border-margin: 20px;
+
+// container
+$container-width: 1080px;
+$breakpoints: (
+  "sm": "screen and (max-width: 400px)",
+  "md": "screen and (max-width: 767px)",
+  "lg": "screen and (max-width: 1079px)",
+) !default;
+
+@mixin mq($breakpoint: md) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+// clearfix
+@mixin clearfix() {
+  &::after {
+    display: block;
+    clear: both;
+    height: 0;
+    content: "";
+  }
+}
+
+// container
+@mixin container() {
+  width: 100% !important;
+  @media all and (min-width: $container-width) {
+    width: $container-width !important;
+  }
+}

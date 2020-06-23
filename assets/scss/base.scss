@@ -1,0 +1,10 @@
+@import "variables";
+html, body, #__nuxt, #__layout, .default  {
+  width: 100%;
+  height: auto;
+}
+
+body {
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  @include text(small, regular);
+}

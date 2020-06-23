@@ -4,7 +4,6 @@
 - SCSS
 - ESLint
 - Jest
-- dotenv
 
 ## Build Setup
 

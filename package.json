@@ -30,6 +30,7 @@
     "eslint-plugin-vue-scoped-css": "^0.5.0",
     "jest": "^26.0.1",
     "node-sass": "^4.14.1",
+    "nuxt-typed-vuex": "^0.1.19",
     "sass-loader": "^8.0.2",
     "ts-jest": "^26.1.0",
     "vue-jest": "^3.0.4"

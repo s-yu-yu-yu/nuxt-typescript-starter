@@ -62,7 +62,8 @@ const nuxtConfig: Configuration = {
   */
   buildModules: [
     '@nuxt/typescript-build',
-    '@nuxtjs/style-resources'
+    '@nuxtjs/style-resources',
+    'nuxt-typed-vuex'
   ],
   /*
   ** Nuxt.js modules
@@ -89,7 +90,10 @@ const nuxtConfig: Configuration = {
       config.node = {
         fs: 'empty'
       };
-    }
+    },
+    transpile: [
+      /typed-vuex/
+    ]
   },
   /*
   ** Typescript options

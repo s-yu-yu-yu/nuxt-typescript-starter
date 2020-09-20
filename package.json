@@ -4,10 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "nuxt-ts",
-    "build": "nuxt-ts build",
+    "generate": "nuxt-ts generate",
     "start": "nuxt-ts start",
-    "export": "nuxt-ts export",
-    "serve": "nuxt-ts serve",
     "test": "jest",
     "lint": "eslint --ext .ts,.js,.vue ."
   },
@@ -15,7 +13,7 @@
     "@nuxt/typescript-runtime": "^0.4.10",
     "@nuxtjs/axios": "^5.11.0",
     "normalize.css": "^8.0.1",
-    "nuxt": "^2.13.0"
+    "nuxt": "^2.14.5"
   },
   "devDependencies": {
     "@nuxt/typescript-build": "^1.0.3",

@@ -1,5 +1,5 @@
 # nuxt-typescript-starter
-- Nuxt.js 2.13.0
+- Nuxt.js 2.14.5
 - TypeScript
 - SCSS
 - ESLint
@@ -15,13 +15,11 @@ $ yarn install
 $ yarn dev
 
 # build for production and launch server
-$ yarn build
 $ yarn start
 
 # generate static project
-$ yarn build
-$ yarn export
-$ yarn serve
+$ yarn generate
+$ yarn start
 ```
 
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).

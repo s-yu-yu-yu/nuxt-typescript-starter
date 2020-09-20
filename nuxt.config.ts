@@ -3,9 +3,8 @@ import { Configuration } from '@nuxt/types';
 const nuxtConfig: Configuration = {
   /*
   ** Nuxt rendering mode
-  ** See https://nuxtjs.org/api/configuration-mode
   */
-  mode: 'spa',
+ ssr: false,
   /*
   ** port and host settings
   */

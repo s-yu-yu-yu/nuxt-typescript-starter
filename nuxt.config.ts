@@ -1,6 +1,24 @@
-import { Configuration } from '@nuxt/types';
+import { NuxtConfig } from '@nuxt/types';
 
-const nuxtConfig: Configuration = {
+/** ENV File */
+const environments = {
+  // Nuxt.js default environment value
+  NODE_ENV: process.env.NODE_ENV!,
+  browser: process.browser!,
+  client: process.client!,
+  mode: process.mode!,
+  modern: process.modern!,
+  server: process.server!,
+  static: process.static!,
+  // custom environment value
+  SAMPLE_ENV: process.env.SAMPLE_ENV!
+};
+
+export type EnvironmentsVariables = Readonly<{
+  [P in keyof typeof environments]: typeof environments[P]
+}>
+
+const nuxtConfig: NuxtConfig = {
   /*
   ** Nuxt rendering mode
   */
@@ -49,7 +67,6 @@ const nuxtConfig: Configuration = {
   ** https://nuxtjs.org/guide/plugins
   */
   plugins: [
-    '~/plugins/environments.ts'
   ],
   /*
   ** Auto import components
@@ -70,7 +87,6 @@ const nuxtConfig: Configuration = {
   */
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
-    '@nuxtjs/dotenv',
     '@nuxtjs/axios'
   ],
   /*
@@ -86,7 +102,7 @@ const nuxtConfig: Configuration = {
     /*
     ** You can extend webpack config here
     */
-    extend (config, ctx) {
+    extend (config) {
       config.node = {
         fs: 'empty'
       };
@@ -105,7 +121,11 @@ const nuxtConfig: Configuration = {
   typescript: {
     typeCheck: true,
     ignoreNotFoundWarnings: true
-  }
+  },
+  /**
+   * publicRuntimeConfig
+   */
+  publicRuntimeConfig: environments
 };
 
 export default nuxtConfig;

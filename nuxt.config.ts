@@ -4,7 +4,7 @@ const nuxtConfig: Configuration = {
   /*
   ** Nuxt rendering mode
   */
- ssr: false,
+  ssr: false,
   /*
   ** port and host settings
   */
@@ -62,6 +62,7 @@ const nuxtConfig: Configuration = {
   buildModules: [
     '@nuxt/typescript-build',
     '@nuxtjs/style-resources',
+    '@nuxtjs/composition-api/module',
     'nuxt-typed-vuex'
   ],
   /*
@@ -93,6 +94,10 @@ const nuxtConfig: Configuration = {
     transpile: [
       /typed-vuex/
     ]
+  },
+  generate: {
+    // choose to suit your project
+    interval: 2000
   },
   /*
   ** Typescript options

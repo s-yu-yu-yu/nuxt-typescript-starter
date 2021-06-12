@@ -17,6 +17,7 @@
   },
   "devDependencies": {
     "@nuxt/typescript-build": "^1.0.3",
+    "@nuxtjs/composition-api": "^0.24.4",
     "@nuxtjs/dotenv": "^1.4.1",
     "@nuxtjs/eslint-config-typescript": "^2.0.0",
     "@nuxtjs/style-resources": "^1.0.0",

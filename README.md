@@ -1,6 +1,7 @@
 # nuxt-typescript-starter
-- Nuxt.js 2.14.5
+- Nuxt.js 2.15.6
 - TypeScript
+- CompositionApi
 - SCSS
 - ESLint
 - Jest

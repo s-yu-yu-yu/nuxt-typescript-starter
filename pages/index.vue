@@ -5,9 +5,6 @@
       <h1 class="title">
         nuxt-typescript-starter
       </h1>
-      <a href="./sample">
-        sample
-      </a>
       <div class="links">
         <a
           href="https://nuxtjs.org/"
